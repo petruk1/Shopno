@@ -1,0 +1,37 @@
+.fon{
+    position: absolute;
+   }
+
+
+.inscr{
+    color: rgb(210, 216, 216);
+    padding: 150px 150px 30px 30px;
+    position: relative;
+    float: left;
+   }
+.inscr-m{
+  color: rgb(210, 216, 216);
+  padding: 150px 100px 30px 30px;
+   position: relative;
+   float: left;
+  }
+.close-pop{
+  display: block;
+    
+    bottom: 10px;
+}
+#new-1,#new-3,#new-6{
+  padding-right: 100px;
+  min-width: 700px;
+  background-color: rgb(48, 230, 255);
+  display: none;
+  overflow: hidden;
+}
+#new-2,#new-4, #new-5{
+  padding-right: 100px;
+  min-width: 500px;
+
+  background-color: rgb(48, 230, 255);
+  display: none;
+  overflow: hidden;
+}

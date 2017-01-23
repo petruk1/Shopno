@@ -1,0 +1,37 @@
+header{
+	background-color: #e8f0ff;
+	overflow: hidden;
+}
+header h1{
+	text-shadow: 0.1em 0.1em 0.35em  #686a6d;
+	letter-spacing: 2px;
+}
+.header-logo{
+	padding: 35px 0px 0px 50px;
+}
+	
+.header-menu{
+	align-content: bottom;
+	padding: 50px;
+	
+}
+
+.header-text{
+	margin: 100px 0px 100px 0px;
+}
+
+.highlight{
+	background-color:#a8c9ff;
+}
+.contact-button{
+	width: 200px;
+	height: 35px;
+	letter-spacing: 1px;
+
+}
+
+#juice{
+	padding: 0px 0px 100px 100px;
+	overflow: hidden;
+
+}

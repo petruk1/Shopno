@@ -1,0 +1,30 @@
+#main-block{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background:yellowgreen;
+	z-index: 2;
+
+}
+#per{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	/*background-image: url(images/book.png);*/
+	float: right;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+}
+h1{
+	opacity: 1;
+}
+#by-click{
+	background-color: blue;
+	width: 50px;
+	height: 50px;
+	display: none;
+	}
+#per:visited>#by-click{
+	
+	display: block;
+}

@@ -1,0 +1,11 @@
+#person-info{
+  background-color: #ededed;
+  padding-right: 100px;
+}
+#arrow-buttons{
+  padding: 0;
+  margin: 0;
+}
+.arrow-right-poss{
+  float: right;
+}
