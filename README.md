@@ -1,2 +1,2 @@
 # JS-Course
-JS what i have done
+JS. That i have done
