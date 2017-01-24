@@ -1,79 +1,85 @@
-#contacts{
-  padding-left: 15px;
+#contact-data{
+  margin: 10px;
   padding-top: 25px;
-  float: right;
-  margin-right: 8%;
   background-color: rgba(10,10,10, 0.6);
-  width: 520px;
+  width: 540px;
   height: 460px;
+}
 
+#contact-data h4{
+  color: rgba(210, 216, 216,0.8);
+  font-weight: 30px;
 }
-#contacts h4{
-   color: rgba(210, 216, 216,0.8);
-    font-weight: 30px;
-}
+
 #map{
-  width:490px;
+  width:510px;
   height:200px;
   margin: 15px;
   margin-left: 0px;
   background:yellow
 }
-#cont-forma{
-   padding-top: 25px;
-  margin-left: 8%;
+
+#contact-form{
+  margin: 10px;
+  padding-top: 25px;
   background-color: rgba(10, 10, 10, 0.6);
-  float: left;
-  width: 590px;
+  width: 540px;
   height: 460px;
 }
 
+#contact-form textarea{
+  width: 500px; 
+  height: 165px;
+  margin-left:   10px;
+  background-color: rgba(255, 255, 255,0);
+  border:0px;
+  border-bottom:  1px solid rgba(210, 216, 216, .5);
+-
+}
 
 .input-field{
-   height: 40px;
-  width: 570px;
+  height: 40px;
+  width: 500px;
   margin:  10px;
   opacity: 1;
   background-color: rgba(255, 255, 255,0);
   border:0px;
-   border-bottom:  1px solid rgba(210, 216, 216, .5);
-
-}
-#cont-forma textarea{
-   width: 570px;
-   height: 165px;
-  margin-left:   10px;
-   background-color: rgba(255, 255, 255,0);
-   border:0px;
-   border-bottom:  1px solid rgba(210, 216, 216, .5);
-
+  border-bottom:  1px solid rgba(210, 216, 216, .5);
 }
 
-#subm-butt{
-    height: 50px; 
-    width: 150px;
-    margin-top: 15px;
-    margin-left: 10px;
-    background-color: rgb(0, 243, 247);
-    border: 1px;
-   } 
-#cont-footer{
-      background-image: url(../images/bg_footer.png);
-   } 
 ::-webkit-input-placeholder{
-   color: rgba(210, 216, 216,0.8);
-    font-weight: bold;
-    border-bottom: 2px ;
-   }
-::-webkit-textarea-placeholder{
-   color: rgba(210, 216, 216,0.8);
-   font-weight: bold;
-    border-bottom: 2px ;
-   }
-   .social{
-  text-align: center;
+ color: rgba(210, 216, 216,0.8);
+ font-weight: bold;
+ border-bottom: 2px ;
 }
-#social-footer{
+
+::-webkit-textarea-placeholder{
+  color: rgba(210, 216, 216,0.8);
+  font-weight: bold;
+  border-bottom: 2px ;
+}
+
+
+#send-button{
+  height: 50px; 
+  width: 150px;
+  margin-top: 15px;
+  margin-left: 10px;
+  background-color: rgb(0, 243, 247);
+  border: 1px;
+} 
+
+#contact-part{
+   background-image: url(../images/bg_footer.png);
+} 
+
+
+#social-links-part{
   padding: 50px 0px 50px 0px;
   background-color: #444444;
+  text-align: center;
+}
+
+#social-links-part img:hover{
+  background-color: rgb(150, 244, 255);
 }
