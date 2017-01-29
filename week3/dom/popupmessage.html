@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "ident">
+
+</div>
+<script>
+    var div = document.getElementById("ident");
+
+    div.style.cssText_='top: 10;\
+    right: 10;\
+        html: "Привет";\
+        className: "welcome"'
+    var i = 1;
+    function setVis(v,isVis){
+
+        if(isVis){
+            v.style.display="inline-block";
+            v.style.top="10px";
+            v.style.right = "10px";
+            v.style.font.color="yellow";
+            v.style.backgroundColor="red"
+            v.style.border="2px solid black";
+            v.style.padding="10px";
+            v.style.float="right"
+            v.innerHTML="Hello " + i
+            i++;
+        }
+
+        else v.style.display="none";
+    }
+    var isVisible=true;
+    setInterval(function () {
+        isVisible=!isVisible;
+        setVis(div,isVisible);
+
+    },1500)
+
+
+
+</script>
+</body>
+</html>

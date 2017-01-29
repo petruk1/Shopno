@@ -1,0 +1,20 @@
+<div>Это</div>
+<div>Все</div>
+<div>Элементы DOM</div>
+
+<script>
+    /* ваш код полифилла */
+
+    var elem = document.body.children[0];
+    if (Element.prototype.removel ===undefined) {
+        Element.prototype.removel = function removel() {
+            if (elem.parentNode) {
+                var parent = elem.parentNode;
+                parent.removeChild(elem);
+                alert("removed");
+            }
+        }
+    }
+
+    elem.removel();
+</script>

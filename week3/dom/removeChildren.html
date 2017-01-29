@@ -1,0 +1,35 @@
+<table id="table">
+    <tr>
+        <td>Это</td>
+        <td>Все</td>
+        <td>Элементы DOM</td>
+    </tr>
+    <tr>
+        <td>Это</td>
+        <td>Все</td>
+        <td>Элементы DOM</td>
+    </tr>
+</table>
+
+<ol id="ol">
+    <li>Вася</li>
+    <li>Петя</li>
+    <li>Маша</li>
+    <li>Даша</li>
+</ol>
+
+<script>
+    var table = document.getElementById("table");
+    var ol = document.getElementById("ol");
+
+
+    function removeChildren(elem) {
+        var content = elem.children.length;
+        for(var i = 0, j=0; i< content; i++)
+            elem.removeChild(elem.children[j]);
+    }
+
+    removeChildren(table); // очищает таблицу
+   removeChildren(ol); // очищает список
+
+</script>

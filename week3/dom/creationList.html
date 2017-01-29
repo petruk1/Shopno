@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var h = document.createElement("h1");
+    h.innerHTML="List";
+    document.body.appendChild(h)
+    while(true){
+        var text = prompt("Enter some list item","");
+        if(text){
+            var t = document.createElement("li");
+            t.appendChild(document.createTextNode(text));
+            document.body.appendChild(t)
+        }
+            else break;
+
+    }
+</script>
+</body>
+</html>

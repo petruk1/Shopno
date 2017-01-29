@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-  <link rel="stylesheet" type="text/css" href="normalize.css">
-  <link rel="stylesheet" type="text/css" href="forTests.css">
-  <script src="code.js"></script>
+<title>W3.CSS</title>
+
 <body>
 
-<div id="menu-block">
-  <img  id="menu-button" src="images/menue.png">
-  <div id= "drop-down-menu">
-  	<a href="#!">ABOUTUS</a>
-  	<a href="#!">FEATURED&nbspWORKS</a>
-  	<a href="#!">OUR SERVICES</a>
-  	<a href="#!">SMALL TEAM</a>
-  	<a href="#!">WHAT THEY SAYS</a>
-  	<a href="#1">CONTACTS</a>
+<h2 class="w3-center">Manual Slideshow</h2>
 
+<div class="slider">
+<div id="slider-content">
+
+  <img class="mySlides" src="images\chair_1.jpg" style="width:80%">
+  <img class="mySlides" src="images\chair_2.jpg" style="width:80%">
+  <img class="mySlides" src="images\chair_3.jpg" style="width:80%">
+  <img class="mySlides" src="images\chair_3.jpg" style="width:80%">
+   <div id="progress-bar">
+     <img class="progress" src="images\p_0.png" >
+     <img class="progress" src="images\p_1.png" >
+     <img class="progress" src="images\p_1.png" >
+     <img class="progress" src="images\p_1.png" >
   </div>
   </div>
-  <h1>gfds</h1>
-   <h1>gfds</h1>
+  <div id="buttons">
+  <!--<a id="previous" class="button" onclick="plusDivs(-1)">&#10094;</a>
+  <a id="next" class="button" onclick="plusDivs(1)">&#10095;</a>-->
+  </div>
   
-   <h1>gfds</h1>
-  
-   <h1>gfds</h1>
-  
-   <h1>gfds</h1>
-  
-   <h1>gfds</h1>
-  
-   <h1>gfds</h1>
-  
-   <h1>gfds</h1>
-  
-   <h1>gfds</h1>
-  
-  
-  
+ 
+ 
+</div>
+<div id="conte">
+    <div class="content">first</div>
+    <div class="content">Second</div>
+    <div class="content">Thrid</div>
+    <div class="content">Fourth</div>
+  </div>
+<input type="button" onClick = "plusDivs(1)" name="n" value=">">
+<style>
+.content{
+
+}
+#conte{
+  position: absolute;
+}
+#progress-bar{
+text-align: center;
+display: block;
+}
+#slider-content{
+ position: absolute; 
+ display: inline-block;
+ width:15%; 
+}
+#buttons{
+  position:relative;
+  width: 200px;
+    padding-top: 50%
+}
+
+.mySlides{
+display: inline-block;
+}
+
+#previous{
+  float: left;
+}
+#next{
+float: right;
+}
+.slider{  
+  display:inline-block;   
+}
+</style>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var y = document.getElementsByClassName("progress");
+  var z = document.getElementsByClassName("content");
+
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     z[i].style.display = "none";
+     y[i].src ="images/p_1.png"  
+  }
+  x[slideIndex-1].style.display = "inline-block"; 
+  z[slideIndex-1].style.display = "inline-block"; 
+  y[slideIndex-1].src = "images/p_0.png";  
+}
+</script>
+
 </body>
 </html>

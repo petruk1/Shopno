@@ -1,10 +1,46 @@
+#about-us{
+	background-color: #e8e8e8;
+	overflow: hidden;
+}
 .about-us-main-text{
 	padding: 60px 0px 7.5% 0px;
 }
-.text-block-padd{
+/*.text-block-padd{
 padding: 20px 250px 15px 0px;
-}
+}*/
 
 .about-us-image{
  padding: 0px 0px 7.5% 0px;
+}
+/*slider*/
+#progress-bar{
+padding: 20px;
+text-align: center;
+display: block;
+}
+#slider-content{
+text-align: center;
+ position: absolute; 
+ display: block;
+}
+#buttons{
+	display: block;
+    padding-top: 40% 
+}
+
+.mySlides{
+display: none;
+height: 350px;
+}
+
+#previous{
+  float: left;
+}
+#next{
+float: right;
+
+}
+.slider{  
+  display: block;  
+
 }

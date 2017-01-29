@@ -20,7 +20,9 @@
 }
 
 .img-wraper{
-	padding: 100px;
+
+  padding-top: 0px;
+  padding-bottom: 20px
 }
 .img-block{
   overflow: hidden;
@@ -29,7 +31,7 @@
 
 }
 .title-block{
-	padding: 40px 0px 7.5% 0px;
+	padding: 20px 0px 50px 0px;
 }
 .sec-padd{
   overflow: hidden;
