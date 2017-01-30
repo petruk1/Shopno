@@ -1,35 +1,26 @@
-#menu-block:hover #drop-down-menu{
-	
-	display: block;
-	padding: 0px;
-}
-#drop-down-menu{
-	background-color: white;
-	display: none;
-	position: absolute;
-	padding: 0px;
-	
-	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
-	z-index: 1;
-}
-#drop-down-menu a{
-	display: inline-block;
-	color: black;
-	font-weight: 16px;
-	text-decoration: none;
-	padding: 7px;
-
-}
-#drop-down-menu a:hover{
-	background-color: #f1f1f1;
-}
-#menu-button{
-	
-	padding: 15px;
-}
-
-#menu-block{
-	margin: 0px;
+#hover-wraper{
 	position: relative;
-	display:inline-block;
+	background-image: url(images/hover_info_fon.png);
+	display: none;
+	width: 300px;
+	top: 100px;
+	
+
+}
+#hover-content{
+	display: block;
+	margin: 30px;
+	margin-top: 40px;
+}
+#hover-social-links{
+
+	padding-top: 20px;
+}
+#bg{
+	position: absolute;
+	display: inline-block;
+	
+}
+#bg:hover +#hover-wraper{
+	display: inline-block;
 }

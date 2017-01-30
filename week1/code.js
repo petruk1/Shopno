@@ -21,7 +21,7 @@ function myMap() {
     }
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
-//slider
+//slider ubout us
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -42,4 +42,30 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "inline-block"; 
   y[slideIndex-1].src = "images/p_0.png";  
+}
+
+//slider they says
+showDivsTheySays(slideIndex);
+
+function plusDivsTheySays(n) {
+  showDivsTheySays(slideIndex += n);
+}
+
+function showDivsTheySays(n) {
+  var i;
+  var x = document.getElementsByClassName("team-mate");
+  var y = document.getElementsByClassName("progress-for-team-mate");
+  var z = document.getElementsByClassName("team");
+
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     y[i].src ="images/p_1.png"  
+     z[i].style.display = "none";
+
+  }
+  x[slideIndex-1].style.display = "inline-block"; 
+  y[slideIndex-1].src = "images/p_0.png";  
+  z[slideIndex-1].style.display = "inline-block";
 }

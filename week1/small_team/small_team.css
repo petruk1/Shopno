@@ -2,3 +2,29 @@
 	background-color: #edeeef;
 	overflow: hidden;
 }
+#hover-wraper{
+	position: relative;
+	background-image: url(images/hover_info_fon.png);
+	display: none;
+	width: 300px;
+	top: 100px;
+	
+
+}
+#hover-content{
+	display: block;
+	margin: 30px;
+	margin-top: 40px;
+}
+#hover-social-links{
+
+	padding-top: 20px;
+}
+.position-absolute{
+	position: absolute;
+	display: inline-block;
+	
+}
+.position-absolute:hover +#hover-wraper{
+	display: inline-block;
+}

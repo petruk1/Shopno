@@ -1,103 +1,25 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
 
+<head><title>W3.CSS</title>
+<link rel="stylesheet" type="text/css" href="forTests.css">
+</head>
 <body>
-
-<h2 class="w3-center">Manual Slideshow</h2>
-
-<div class="slider">
-<div id="slider-content">
-
-  <img class="mySlides" src="images\chair_1.jpg" style="width:80%">
-  <img class="mySlides" src="images\chair_2.jpg" style="width:80%">
-  <img class="mySlides" src="images\chair_3.jpg" style="width:80%">
-  <img class="mySlides" src="images\chair_3.jpg" style="width:80%">
-   <div id="progress-bar">
-     <img class="progress" src="images\p_0.png" >
-     <img class="progress" src="images\p_1.png" >
-     <img class="progress" src="images\p_1.png" >
-     <img class="progress" src="images\p_1.png" >
-  </div>
-  </div>
-  <div id="buttons">
-  <!--<a id="previous" class="button" onclick="plusDivs(-1)">&#10094;</a>
-  <a id="next" class="button" onclick="plusDivs(1)">&#10095;</a>-->
+<img id="bg" src="images\team_girl.png">
+<div id="hover-wraper">
+  <div id="hover-content">
+    <h4 class="ucase-h"><span class="bold-h">GINA SILVER</span> / UI/UX DESIGNER</h4>
+    <span>Lorem Ipsum is simply dummy text of the printing and you
+    standard dummy know that text ever since the 1500s;
+   </span>
+    <div id="hover-social-links">
+      <img src="images\facebook_link.png">
+      <img src="images\twitter_link.png">
+      <img src="images\ball_link.png">
+      <img src="images\gmail_link.png">
+    </div>
   </div>
   
- 
- 
 </div>
-<div id="conte">
-    <div class="content">first</div>
-    <div class="content">Second</div>
-    <div class="content">Thrid</div>
-    <div class="content">Fourth</div>
-  </div>
-<input type="button" onClick = "plusDivs(1)" name="n" value=">">
-<style>
-.content{
-
-}
-#conte{
-  position: absolute;
-}
-#progress-bar{
-text-align: center;
-display: block;
-}
-#slider-content{
- position: absolute; 
- display: inline-block;
- width:15%; 
-}
-#buttons{
-  position:relative;
-  width: 200px;
-    padding-top: 50%
-}
-
-.mySlides{
-display: inline-block;
-}
-
-#previous{
-  float: left;
-}
-#next{
-float: right;
-}
-.slider{  
-  display:inline-block;   
-}
-</style>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var y = document.getElementsByClassName("progress");
-  var z = document.getElementsByClassName("content");
-
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-     z[i].style.display = "none";
-     y[i].src ="images/p_1.png"  
-  }
-  x[slideIndex-1].style.display = "inline-block"; 
-  z[slideIndex-1].style.display = "inline-block"; 
-  y[slideIndex-1].src = "images/p_0.png";  
-}
-</script>
-
 </body>
 </html>
