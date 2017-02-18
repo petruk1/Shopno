@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <ul id="list" class="tree">
+    <li><a>Животные</a>
+      <ul>
+        <li><a>Млекопитающие</a>
+          <ul>
+            <li><a>Коровы</a></li>
+            <li><a>Ослы</a></li>
+            <li><a>Собаки</a></li>
+            <li><a>Тигры</a></li>
+          </ul>
+        </li>
+        <li><a>Другие</a>
+          <ul>
+            <li><a>Змеи</a></li>
+            <li><a>Птицы</a></li>
+            <li><a>Ящерицы</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a>Рыбы</a>
+      <ul>
+        <li><a>Аквариумные</a>
+          <ul>
+            <li><a>Гуппи</a></li>
+            <li><a>Скалярии</a></li>
+          </ul>
+
+        </li>
+        <li><a>Морские</a>
+          <ul>
+            <li><a>Морская форель</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+<script>
+  var list = document.getElementById("list");
+  list.onclick = function(event){
+
+    //найближчий li від посилання
+  var closestLi = event.target.closest("li");
+
+  //шукаю дочрній Ul
+  var currentUL = closestLi.getElementsByTagName("ul")[0];
+
+  //при умові що клік відбувся на посиланні та в найближчого li дочірній ul існує, ховаю або показую його
+  if(event.target.tagName=="A" && currentUL)
+    if(currentUL.style.display == "none")
+      currentUL.style.display ="block"
+   else currentUL.style.display = "none";
+  }
+</script>
+</html>

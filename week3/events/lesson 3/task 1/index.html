@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #field {
+      width: 200px;
+      height: 150px;
+      border: 10px groove black;
+      background-color: #00FF00;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #ball {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -20px;
+      margin-top: -20px;
+    }
+  </style>
+</head>
+
+<body style="height:2000px">
+
+  Кликните на любое место поля, чтобы мяч перелетел туда.
+  <br> Мяч никогда не вылетит за границы поля.
+
+
+  <div id="field" onclick="move(event)"  style="cursor:pointer">
+    <img src="https://js.cx/clipart/ball.svg" id="ball" style="  transition-property: top left;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+<script>  
+
+  var ball = document.getElementById("ball");
+  var field = document.getElementById("field");
+  
+  function move(event){
+
+    //встанослюємо м'яч в місце кліка'
+    ball.style.top = event.clientY - field.offsetTop  -ball.height/2 + 10+ "px";
+    ball.style.left = event.clientX - field.offsetLeft -ball.width/2+10 + "px";
+
+    //корегуємо координати м'яча залежно від чтого чи вийшов він за лівий край'
+   if(event.clientX<ball.width) {
+   ball.style.left = ball.width/2+ "px";
+   } 
+
+  //корегуємо координати м'яча залежно від чтого чи вийшов він за верхній край'
+   if(event.clientY-event.currentTarget.offsetTop -10< ball.height/2){
+       ball.style.top = ball.height/2+ "px";
+   } 
+//корегуємо координати м'яча залежно від чтого чи вийшов він за правий край'
+   if(event.clientX > field.clientWidth) {
+   ball.style.left =field.clientWidth 
+   - ball.width/2  + "px";
+   } 
+//корегуємо координати м'яча залежно від чтого чи вийшов він за нижній край'
+   if(event.clientY >( field.clientHeight+ event.currentTarget.offsetTop-10)) {
+   ball.style.top =field.clientHeight 
+   - ball.height/2  + "px";
+   } 
+   
+}
+</script>
+</body>
+
+</html>

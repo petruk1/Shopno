@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    th {
+      cursor: pointer;
+    }
+
+    th:hover {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table id="grid">
+    <thead>
+      <tr>
+        <th data-type="number">Возраст</th>
+        <th data-type="string">Имя</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5</td>
+        <td>Вася</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Петя</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Женя</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Маша</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Илья</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    var table = document.getElementById("grid");
+    var mas=[];
+    
+     for(var i =1 ; i<table.rows.length; i++)
+     {var j = 0;
+      mas[table.rows[i].cells[j].innerHTML] = table.rows[i].cells[j+1].innerHTML;
+     }
+     console.log(mas);
+     for(m in mas)
+    if(mas[m]>mas[m+1]){
+      var buf= mas[m];
+    mas[m] = mas[m+1];
+    mas[m+1] = buf;
+    }
+   console.log(mas);
+   for(vat i = 1; i<table.rows.length; i++){
+    table.rows[i].cells[j] = 
+   }
+
+    
+
+  </script>
+
+</body>
+
+</html>
