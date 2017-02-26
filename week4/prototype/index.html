@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+
+		var Classroom = function(){
+			this.students =[]
+ 		//	this.parents  = []
+
+		}
+		Classroom.prototype.addStudent = function(student) {
+			this.students.push(student)
+		};			
+		Classroom.prototype.removeStudent = function(student){
+			var index = this.students.indexOf(student);
+			this.students.splice(index,1);
+		};
+		Classroom.prototype.getStudentsCount = function(){
+			console.log("Class has " + this.students.length + "students.");
+		}
+
+
+
+		 function People(name, surname, gender, national){
+			this.name = name;
+			this.surname = surname;
+			this.gender = gender;
+			this.nationality = national;
+		}
+
+		People.prototype.changeNationality = function(nationality){
+			this.nationality = nationality
+		}
+		People.prototype.sayMyName = function() {
+			if(this.gender=="male")
+			console.log("Mr. " +this.name);
+			else console.log("Mrs. " + this.name)
+		};
+
+
+
+
+		function Student(name, surname, gender, nationality, parent,subjects){
+			People.apply(this,arguments)
+			this.subjects = subjects; 
+			this.parent = parent;
+
+		}
+		
+		Student.prototype = Object.create(People.prototype);
+		Student.prototype.construnctor = Student;
+
+		Student.prototype.addSubject = function(subject){
+			this.subjects.push(subject);
+			console.log(this.subjects);
+		}
+		
+		Student.prototype.removeSubject = function(subject){
+			var index = this.subjects.indexOf(subject);
+			this.subjects.splice(index,1);
+			console.log(this.subjects);
+		}
+		Student.prototype.getData = function(){
+			console.log("Data \n" + "Name: " + this.name+
+				"\nSurname: " + this.surname+
+				"\nGender: " + this.gender +
+				"\nNationality: " + this.nationality+
+				"\nParent: "+ this.parent.name + " " + this.parent.surname+
+				"\nSubjects: " + this.subjects);
+		}
+
+		var Parent = function(name, surname, gender, nationality, rigor){
+			People.apply(this,arguments);
+			this.rigor = rigor;
+		}
+		Parent.prototype = Object.create(People.prototype);
+		Parent.prototype.construnctor = Parent;
+
+
+
+		var parentOne = new Parent("Victor","Victorovich","male","Ukrainian",2);
+		var parentOne = new Parent("Maxim","Olexandrovich","male","Russian",5);
+
+		var studentOne = new Student("Michael","Victorovich","male","Ukrainian",parentOne, ["math","phisics"]);
+		var studentTwo = new Student("Vasiliy","Maximovich","male","Ukrainian",parentOne, ["math","phisics"]);
+
+		var classroomOne = new Classroom()
+		classroomOne.addStudent(studentOne);
+		classroomOne.addStudent(studentTwo);
+
+		studentOne.addSubject("chemistry");
+		studentOne.getData();
+		studentTwo.removeSubject("math");
+		studentTwo.getData();
+
+		classroomOne.getStudentsCount();
+
+
+
+		
+		</script>
+	</body>
+</html>

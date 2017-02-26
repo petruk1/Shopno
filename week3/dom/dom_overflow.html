@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<style>
+    .slidebar{
+        width: 400px;
+        overflow:hidden;
+        transition: margin-left 100ms;
+        background: blue;
+        border: 4px black;
+    }
+</style>
+
+<button class="arrow" onClick="previous()">⇦</button>
+<button class="arrow" onclick="next()">⇨</button>
+
+<div id = "div" class="slidebar">
+    <ul id = "ul">
+        <li><img src="https://js.cx/carousel/1.png"></li>
+        <li><img src="https://js.cx/carousel/2.png"></li>
+        <li><img src="https://js.cx/carousel/3.png"></li>
+        <li><img src="https://js.cx/carousel/4.png"></li>
+        <li><img src="https://js.cx/carousel/5.png"></li>
+        <li><img src="https://js.cx/carousel/6.png"></li>
+        <li><img src="https://js.cx/carousel/7.png"></li>
+        <li><img src="https://js.cx/carousel/8.png"></li>
+        <li><img src="https://js.cx/carousel/9.png"></li>
+        <li><img src="https://js.cx/carousel/10.png"></li>
+    </ul>
+</div>
+
+<script>
+    var countLeft = document.getElementsByTagName("li").length;
+    var i =0;
+    var marginLeft=0;
+    function next(){
+        if(countLeft>0)
+            countLeft-=3;
+        else{
+            countLeft=0;
+        }
+        alert(countLeft)
+
+        if(countLeft<3){
+            if(countLeft>=1)
+                marginLeft-=(countLeft*130)
+
+        } else{
+            marginLeft-=(3*130)
+
+        }
+        document.getElementById("ul").style.marginLeft =marginLeft+"px";
+    }
+    function previous(){
+        if(countLeft>document.getElementsByTagName("li").length)
+            countLeft=document.getElementsByTagName("li").length);
+    else{
+
+        countLeft+=3;
+    }
+    alert(countLeft)
+
+    if(countLeft>document.getElementsByTagName("li").length){
+        if(countLeft<3)
+            marginLeft+=(countLeft*130)
+
+    } else{
+        marginLeft+=(3*130)
+
+    }
+    document.getElementById("ul").style.marginLeft =marginLeft+"px";
+    }
+
+
+
+</script>
+</body>
+
+</html>

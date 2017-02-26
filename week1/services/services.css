@@ -4,7 +4,7 @@
 }
 .fon{
     position: absolute;
-   }
+}
 
 
 .inscr{
@@ -21,8 +21,9 @@
   }
 .close-pop{
   display: block;
+  position: absolute;
+  bottom: 25px;
     
-    bottom: 10px;
 }
 #new-1,#new-3,#new-6{
   padding-right: 100px;
@@ -30,6 +31,7 @@
   background-color: rgb(48, 230, 255);
   display: none;
   overflow: hidden;
+  position: relative;
 }
 #new-2,#new-4, #new-5{
   padding-right: 100px;
@@ -38,4 +40,5 @@
   background-color: rgb(48, 230, 255);
   display: none;
   overflow: hidden;
+  position: relative;;
 }
