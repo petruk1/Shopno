@@ -1,0 +1,36 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		function FormatError(property){
+			this.name = "FormatError";
+			SyntaxError.apply(this,arguments);
+			this.property = property;
+			this.message ="Mistake in " +  property;
+
+			if(SyntaxError.captureStackTrace)
+				SyntaxError.captureStackTrace(this, FormatError);
+			else 
+				this.stack = (new SyntaxError()).stack
+
+		}
+		FormatError.prototype = Object.create(SyntaxError.prototype);
+		FormatError.prototype.constructor = FormatError;
+	
+		var err = new FormatError("ошибка форматирования");
+
+		console.log( err.message ); 
+		console.log( err.name ); // FormatError
+		console.log( err.stack ); // стек на момент генерации ошибки
+
+		console.log( err instanceof SyntaxError ); // true
+
+	</script>
+</body>
+</html>

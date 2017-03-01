@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	function Animal(){
+		this.eat = true;
+	} 
+	
+	
+	var animal = new Animal();
+	function Rabbit(name) {
+		this.name = name;
+	} 
+	Rabbit.prototype = Object.create(Animal.prototype);
+	Rabbit.prototype.constructor = Rabbit
+	var rabbit = new Rabbit("first");
+	console.log(rabbit.eat)
+	console.log(rabbit.name)
+
+</script>
+</body>
+</html>
