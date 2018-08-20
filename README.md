@@ -1,2 +1,2 @@
-# JS-Course
-JS. That i have done
+# HTML/CSS/JS - Origins
+all stuff I've pass to became frontend dev
